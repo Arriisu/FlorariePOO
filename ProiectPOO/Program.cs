@@ -11,8 +11,9 @@ foreach (KeyValuePair<string, string> kvp in utilizatori)
     Console.WriteLine("Email = {0}, Parola = {1}", kvp.Key, kvp.Value);
 }
 
-Utilizator u3 = new Utilizator("U003", "Malmare", "Ari", "ari.malmare@student.upt.ro", "0987");
-Utilizator u4 = new Utilizator("U004", "Vucu", "Aris", "aris.vucu@student.upt.ro", "1234");
+Florarie f = new Florarie("Trandafiru");
+Angajat u3 = new Angajat("U003", "Malmare", "Ari", "ari.malmare@student.upt.ro", "0987", f);
+Client u4 = new Client("U004", "Vucu", "Aris", "aris.vucu@student.upt.ro", "1234");
 mu.adaugareUtilizator(u3);
 Console.WriteLine("Noile valori:");
 utilizatori = mu.returneazaUtilizatori();
@@ -22,3 +23,7 @@ foreach (KeyValuePair<string, string> kvp in utilizatori)
 }
 u4.Login(mu);
 u4.Logout();
+
+u4.comandaBuchet(f, "Miriam", "+40724123456", "un buchet de trandafiri");
+u4.comandaBuchet(f, "Miriam", "+40724123456", "inca un buchet");
+f.afiseazaComenzi();
