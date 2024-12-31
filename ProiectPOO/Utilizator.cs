@@ -1,6 +1,6 @@
 namespace proiectPOO;
 
-public class Utilizator
+public abstract class Utilizator
 {
     protected String CodUnic;
     protected String Nume;
