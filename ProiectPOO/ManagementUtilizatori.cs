@@ -33,5 +33,12 @@ public class ManagementUtilizatori
     public void adaugareUtilizator(Utilizator u)
     {
         Utilizatori.Add(u.getEmail(), u.getParola());
+        using (StreamWriter writer = new StreamWriter("../../../utilizatori.txt"))
+        {
+            foreach (KeyValuePair<string, string> kvp in Utilizatori)
+            {
+                writer.WriteLine(kvp.Key + " " + kvp.Value);
+            }
+        }
     }
 }
