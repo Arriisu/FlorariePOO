@@ -9,4 +9,10 @@ public class Angajat : Utilizator
     {
         this.Florarie = Florarie;
     }
+
+    public void VizualizeazaComenzi()
+    {
+       Console.WriteLine("Comenzile clientilor: ");
+       Florarie.afiseazaComenzi();
+    }
 }
