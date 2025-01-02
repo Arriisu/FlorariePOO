@@ -63,5 +63,10 @@ public class Florarie
             throw;
         }
     }
+
+    public Comanda GetComandaId(int id)
+    {
+        return Comenzi.Find(c => c.AWB == id);
+    }
         
 }
