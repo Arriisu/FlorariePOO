@@ -35,7 +35,7 @@ public class Angajat : Utilizator
        var comanda = Florarie.GetComandaId(id);
        if (comanda != null && comanda.Status == StatusComanda.InLucru)
        {  
-          comanda.Status == Status.Finalizat;
+          comanda.Status = Status.Finalizat;
           Console.WriteLine($"Comanda cu id-ul {id} a fost finalizata.");
        }
        else
