@@ -44,7 +44,7 @@ public class Florarie
 
     public void FinalizeazaComandaMaterie(int codUnic)
     {
-        var comanda = ComenziMaterie.Find(c => codUnic == codUnic)
+        var comanda = ComenziMaterie.Find(c => c.codUnic == codUnic);
         try
         {
             if ( comanda != null && comanda.Status == StatusMaterie.InAsteptare )
