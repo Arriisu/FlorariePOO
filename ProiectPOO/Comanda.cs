@@ -27,8 +27,9 @@ public class Comanda
         this.Status = StatusComanda.InPreluare;
     }
 
-    public String ToString()
+    public override string ToString()
     {
-        return NumeDestinatar + " " + AWB + " " + NumarTelefon + " " + Descriere + " " + Status;
+        return $"{NumeDestinatar} {AWB} {NumarTelefon} {Descriere} {Status}";
     }
+
 }
